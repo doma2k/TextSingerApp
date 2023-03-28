@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web3-Champions</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js" type="application/javascript"></script>
+    <script src="script.js"></script>
+    <header>
+        <div>
+            <h1>
+                Sign some Text
+            </h1>
+        </div>
+        <div>
+            this is demo app
+        </div>
+    </header>
+    <div class="feel-form">
+        <input type="text" id="white-list" name="white-list" required />
+        <button onclick="addToWhitelist(document.getElementById('white-list').value)">Add Address to list</button>
+        <input type="text" id="text" name="text" required />
+        <button onclick="setDocumentHash(document.getElementById('text').value)">Change Text</button>
+        <br>
+        <button onclick="signDocument()">Sign</button>
+        <br>
+        <p id="result"></p>
+        <!-- <input type="xxx" id="xxx" required />
+        <button onclick="hasSignedDocument(document.getElementById('xxx').value)">Check if address has signed</button> -->
+        <br>
+    </div>
+    <div class="calls">
+        <button onclick="getDocumentHash()">See current Text</button>
+        <button onclick="getWhitelist()">White list</button>
+        <button onclick="isDocumentSigned()">Is Text singed</button>
+    </div>
+</body>
+</html>
